@@ -1,0 +1,63 @@
+package cn.chengxingyao.bindrecyclerview;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
+
+/**
+ * XViewHolder 基础抽象类
+ * @param <T>
+ */
+public abstract class XViewHolder<T> extends RecyclerView.ViewHolder implements View.OnClickListener {
+    RecyclerView.Adapter adapter;
+    T itemData;
+    Context mContext;
+
+    public XViewHolder(View itemView, RecyclerView.Adapter adapter) {
+        super(itemView);
+        this.adapter = adapter;
+        this.mContext=itemView.getContext();
+        itemView.setOnClickListener(this);
+        initView(itemView);
+    }
+
+    /**
+     * 初始化view
+     * @param rootView
+     */
+    protected abstract void initView(View rootView);
+
+    /**
+     * 绑定数据
+     *
+     * @param itemData
+     */
+    public void onBindItemData(T itemData) {
+        this.itemData = itemData;
+        onBindData(itemData);
+    }
+
+
+    /**
+     * 抽象绑定数据方法
+     *
+     * @param itemData
+     */
+    protected abstract void onBindData(T itemData);
+
+    /**
+     * 更新adapter数据
+     */
+    public void notifyDataetChanged() {
+        adapter.notifyDataSetChanged();
+    }
+
+    /**
+     * 移除当前项
+     */
+    protected void remove() {
+        ((XRecyclerViewAdapter) adapter).remove(getAdapterPosition());
+    }
+
+}
