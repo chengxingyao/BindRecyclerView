@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import cn.chengxingyao.xrecyclerview.XViewHolder;
-
 /**
  * Adapter 中 onCreateViewHolder调用的构造Holder  的抽象类
  * Created by cheng on 2017/3/17.

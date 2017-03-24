@@ -6,8 +6,6 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.chengxingyao.xrecyclerview.XViewHolder;
-
 /**
  * Created by cheng on 2017/3/16.
  */

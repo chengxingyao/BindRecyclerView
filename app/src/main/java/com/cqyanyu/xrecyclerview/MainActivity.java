@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
-import cn.chengxingyao.xrecyclerview.XRecyclerView;
-import cn.chengxingyao.xrecyclerview.XRecyclerViewAdapter;
+import cn.chengxingyao.bindrecyclerview.XRecyclerView;
+import cn.chengxingyao.bindrecyclerview.XRecyclerViewAdapter;
 
 public class MainActivity extends AppCompatActivity implements BGARefreshLayout.BGARefreshLayoutDelegate {
 

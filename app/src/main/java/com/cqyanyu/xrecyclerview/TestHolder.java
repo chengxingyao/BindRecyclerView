@@ -4,8 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import cn.chengxingyao.xrecyclerview.IViewHolder;
-import cn.chengxingyao.xrecyclerview.XViewHolder;
+import cn.chengxingyao.bindrecyclerview.IViewHolder;
+import cn.chengxingyao.bindrecyclerview.XViewHolder;
 
 
 /**

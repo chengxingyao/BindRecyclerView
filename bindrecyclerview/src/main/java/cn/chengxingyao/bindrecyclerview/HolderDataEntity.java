@@ -3,8 +3,6 @@ package cn.chengxingyao.bindrecyclerview;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.chengxingyao.xrecyclerview.IViewHolder;
-
 /**
  * Holder 与 数据实体类，用于分组绑定hoder
  * Created by cheng on 2017/3/17.
