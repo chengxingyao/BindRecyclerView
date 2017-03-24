@@ -1,4 +1,5 @@
-package com.cqyanyu.xrecyclerview;
+package cn.chengxingyao.xrecyclerview.example;
+
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements BGARefreshLayout.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         initView();
         adapter = mXRecyclerView.getAdapter();
         mXRecyclerView.setDelegate(this);

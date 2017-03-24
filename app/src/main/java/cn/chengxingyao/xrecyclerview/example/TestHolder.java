@@ -1,5 +1,4 @@
-package com.cqyanyu.xrecyclerview;
-
+package cn.chengxingyao.xrecyclerview.example;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -9,11 +8,10 @@ import cn.chengxingyao.bindrecyclerview.XViewHolder;
 
 
 /**
- * 用于创建holder 类
  * Created by cheng on 2017/3/17.
  */
 
-public class Test2Holder extends IViewHolder {
+public class TestHolder extends IViewHolder {
     @Override
     protected XViewHolder create(View view, RecyclerView.Adapter adapter) {
         return new Holder(view, adapter);
@@ -24,11 +22,7 @@ public class Test2Holder extends IViewHolder {
         return R.layout.test;
     }
 
-
-    /**
-     * 真正的holder 类
-     */
-    class Holder extends XViewHolder<String> {
+    class Holder extends XViewHolder<Integer> {
         protected TextView tvName;
 
         public Holder(View itemView, RecyclerView.Adapter adapter) {
@@ -46,8 +40,8 @@ public class Test2Holder extends IViewHolder {
         }
 
         @Override
-        protected void onBindData(String itemData) {
-            tvName.setText(itemData);
+        protected void onBindData(Integer itemData) {
+            tvName.setText("aaaa" + itemData);
         }
     }
 }
