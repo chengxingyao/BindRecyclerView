@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -8,12 +8,28 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+ext {
+    PUBLISH_GROUP_ID = 'cn.chengxingyao'
+    PUBLISH_ARTIFACT_ID = 'bindrecyclerview'
+    PUBLISH_VERSION = android.defaultConfig.versionName
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file("E:\\maven")
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
         }
     }
 }
@@ -23,4 +39,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.0'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.0.7@aar'
     compile 'com.nineoldandroids:library:2.4.0'
+
 }
